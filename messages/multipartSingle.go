@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"https://github.com/GuoxiW/media-protocol/utility"
+	"github.com/GuoxiW/media-protocol/utility"
 )
 
 type MediaMultipartSingle struct {

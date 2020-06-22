@@ -8,7 +8,7 @@ import (
 	"strconv"
 
 	"github.com/metacoin/flojson"
-	"https://github.com/GuoxiW/media-protocol/utility"
+	"github.com/GuoxiW/media-protocol/utility"
 )
 
 const PROMOTER_ROOT_KEY = "alexandria-promoter"

@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/metacoin/flojson"
-	"https://github.com/GuoxiW/media-protocol/utility"
+	"github.com/GuoxiW/media-protocol/utility"
 	"log"
 	"math"
 	"strconv"
@@ -40,7 +40,7 @@ type hmPoolList []hmPool
 
 var hmPools hmPoolList = hmPoolList{
 	{
-		// https://github.com/dloa/node-merged-pool/blob/2a3f124/lib/pool.js#L39
+		// github.com/dloa/node-merged-pool/blob/2a3f124/lib/pool.js#L39
 		// V1 Alexandria.io is signed with
 		"FLmic78oU6eqXsTAaHGGdrFyY7FznjHfPU",
 		0,
@@ -57,7 +57,7 @@ var hmPools hmPoolList = hmPoolList{
 		1,
 	},
 	{
-		// https://github.com/dloa/node-merged-pool/blob/fcd6ab59/lib/pool.js#L39
+		// github.com/dloa/node-merged-pool/blob/fcd6ab59/lib/pool.js#L39
 		// V1 Alexandria.io is signed with FL4Ty99iBsGu3aPrGx6rwUtWwyNvUjb7ZD
 		"FL4Ty99iBsGu3aPrGx6rwUtWwyNvUjb7ZD",
 		1887692,

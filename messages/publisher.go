@@ -5,12 +5,13 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/Masterminds/squirrel"
-	"https://github.com/GuoxiW/media-protocol/oip042"
-	"https://github.com/GuoxiW/media-protocol/utility"
 	"log"
 	"strconv"
 	"strings"
+
+	"github.com/GuoxiW/media-protocol/oip042"
+	"github.com/GuoxiW/media-protocol/utility"
+	"github.com/Masterminds/squirrel"
 )
 
 const PUBLISHER_ROOT_KEY = "alexandria-publisher"

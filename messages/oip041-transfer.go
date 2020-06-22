@@ -3,7 +3,7 @@ package messages
 import (
 	"database/sql"
 	"fmt"
-	"https://github.com/GuoxiW/media-protocol/utility"
+	"github.com/GuoxiW/media-protocol/utility"
 	"log"
 	"strconv"
 )

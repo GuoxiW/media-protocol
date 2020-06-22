@@ -6,9 +6,9 @@ import (
 	"testing"
 
 	"github.com/metacoin/flojson"
-	mp "https://github.com/GuoxiW/media-protocol"
-	"https://github.com/GuoxiW/media-protocol/oip042"
-	"https://github.com/GuoxiW/media-protocol/utility"
+	mp "github.com/GuoxiW/media-protocol"
+	"github.com/GuoxiW/media-protocol/oip042"
+	"github.com/GuoxiW/media-protocol/utility"
 )
 
 func TestPublishPropertySpatialUnit_Validate(t *testing.T) {

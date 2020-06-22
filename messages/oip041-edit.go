@@ -6,7 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/bitspill/json-patch"
-	"https://github.com/GuoxiW/media-protocol/utility"
+	"github.com/GuoxiW/media-protocol/utility"
 	"log"
 	"strconv"
 	"strings"

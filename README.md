@@ -1,4 +1,4 @@
->fork to use https://github.com/GuoxiW/media-protocol/oip042
+>fork to use github.com/GuoxiW/media-protocol/oip042
 # Media-Protocol
 
 [![Build Status][TravisSVG]][TravisLink] [![Coverage Status][CoverallsSVG]][CoverallsLink] [![Go Report Card][GoReportCardSVG]][GoReportCardLink]
@@ -353,7 +353,7 @@ This project uses the [MIT] License.
 [CoverallsSVG]: https://coveralls.io/repos/github/oipwg/media-protocol/badge.svg?branch=master
 [CoverallsLink]: https://coveralls.io/github/oipwg/media-protocol?branch=master
 
-[GoReportCardSVG]: https://goreportcard.com/badge/https://github.com/GuoxiW/media-protocol
-[GoReportCardLink]: https://goreportcard.com/report/https://github.com/GuoxiW/media-protocol
+[GoReportCardSVG]: https://goreportcard.com/badge/github.com/GuoxiW/media-protocol
+[GoReportCardLink]: https://goreportcard.com/report/github.com/GuoxiW/media-protocol
 
 [MIT]:LICENSE.md
