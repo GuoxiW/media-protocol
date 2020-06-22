@@ -6,9 +6,9 @@ import (
 	"testing"
 
 	"github.com/metacoin/flojson"
-	mp "github.com/oipwg/media-protocol"
-	"github.com/oipwg/media-protocol/oip042"
-	"github.com/oipwg/media-protocol/utility"
+	mp "https://github.com/GuoxiW/media-protocol"
+	"https://github.com/GuoxiW/media-protocol/oip042"
+	"https://github.com/GuoxiW/media-protocol/utility"
 )
 
 func TestPublishPropertyParty_Validate(t *testing.T) {

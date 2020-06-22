@@ -5,9 +5,9 @@ import (
 	"errors"
 	"github.com/jmoiron/sqlx"
 	"github.com/metacoin/flojson"
-	"github.com/oipwg/media-protocol/messages"
-	"github.com/oipwg/media-protocol/oip042"
-	"github.com/oipwg/media-protocol/utility"
+	"https://github.com/GuoxiW/media-protocol/messages"
+	"https://github.com/GuoxiW/media-protocol/oip042"
+	"https://github.com/GuoxiW/media-protocol/utility"
 	"strings"
 )
 

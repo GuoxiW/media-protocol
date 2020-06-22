@@ -3,7 +3,7 @@ package messages
 import (
 	"encoding/json"
 	"errors"
-	"github.com/oipwg/media-protocol/utility"
+	"https://github.com/GuoxiW/media-protocol/utility"
 	"regexp"
 	"strings"
 )

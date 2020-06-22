@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	"github.com/metacoin/flojson"
-	mp "github.com/oipwg/media-protocol"
-	"github.com/oipwg/media-protocol/oip042"
+	mp "https://github.com/GuoxiW/media-protocol"
+	"https://github.com/GuoxiW/media-protocol/oip042"
 )
 
 func TestPublishTomogram_Validate(t *testing.T) {

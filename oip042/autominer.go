@@ -2,7 +2,7 @@ package oip042
 
 import (
 	"encoding/json"
-	"github.com/oipwg/media-protocol/utility"
+	"https://github.com/GuoxiW/media-protocol/utility"
 	"strconv"
 	"strings"
 )

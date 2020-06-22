@@ -7,7 +7,7 @@ import (
 	"strconv"
 
 	"github.com/metacoin/flojson"
-	"github.com/oipwg/media-protocol/utility"
+	"https://github.com/GuoxiW/media-protocol/utility"
 )
 
 const RETAILER_ROOT_KEY = "alexandria-retailer"
