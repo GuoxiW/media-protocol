@@ -1,7 +1,143 @@
->fork to use github.com/GuoxiW/media-protocol/oip042
+> fork to use github.com/GuoxiW/media-protocol/oip042
+> https://oip.wiki/Research-Tomogram
+
 # Media-Protocol
 
 [![Build Status][TravisSVG]][TravisLink] [![Coverage Status][CoverallsSVG]][CoverallsLink] [![Go Report Card][GoReportCardSVG]][GoReportCardLink]
+## OIP-042 JSON Standards
+The following are the current OIP-042 JSON Standards.
+```javascript
+ {
+ 	"oip042": {
+ 		"publish": {
+ 			"artifact": {
+ 				"floAddress": "string",
+ 				"timestamp": ten digit integer,
+ 				"type": "Research",
+ 				"subtype": "Tomogram",
+ 				"details": {
+ 					"title": "string",
+ 					"description": "string",
+ 					"date": ten digit integer,
+ 					"etdbid": "string",
+ 					"artNotes": "string",
+ 					"scopeName": "string",
+ 					"speciesName": "string",
+ 					"strain": "string",
+ 					"NBCItaxID": "string",
+ 					"tiltSingleDual": "string",
+ 					"defocus": "string",
+ 					"magnification": "string",
+ 					"swAcquisition": "string",
+ 					"swProcess": "string",
+ 					"emdb": "string",
+ 					"tags": "comma delimited list of search terms",
+ 					"extraInfo": {
+ 						
+ 					}
+ 				"roles": [
+ 				  {
+ 					"party": "tenure",
+ 				  },
+ 				  {
+ 					"party": "tenure",
+ 				  } 
+ 				],
+ 				"storage": {
+ 					"network": "string",
+ 					"location": "string",
+ 					"files": [
+ 						{
+ 							"fName": "string",
+ 							"fType": "string",
+ 							"fSize": integer,
+ 							"fNotes": "string",
+ 							"dName": "string"
+ 						}
+ 					]
+ 				},
+ 				"signature": "string"
+ 			}
+ 		}
+ 	}
+ }
+ ```
+
+ - Introduction
+ ```
+  artifact.floAddress		... The FLO txid that published this artifact
+ artifact.timestamp		... UNIX timestamp
+ artifact.type			... "Research"
+ artifact.subType		... "Tomogram"
+ artifact.details.
+ 	title			... Default to species name
+ 				''TiltSeriesData:title''
+ 	description		... Optional descriptive text. This may be
+ 					used for application formatted data. Set
+ 					to empty string if no description is available.
+ 	date			... unixtime of original publish date
+ 				''TiltSeriesData:tomo_date''
+ 	etdbid			... ID from caltech's internal db
+ 				''AcquisitionData:DEF_id''
+ 	artNotes		... Notes for the snapshots.
+ 				''AcquisitionData:TXT_notes'' & ''ScopeData:TXT_notes'' & ''SpeciesData:TXT_notes'' & ''TiltSeriesData:TXT_notes''
+ 	scopename		... Name of scope?
+ 				''ScopeData:scopename''
+ 	speciesName		... Name of species
+ 				''SpeciesData:SpeciesName''
+ 	strain			... Name of strain
+ 				''SpeciesData:strain''
+ 	NBCItaxID		... NBCI taxonomy ID
+ 				''SpeciesData:tax_id''
+ 	tiltSingleDual		... tilited in one axis or two axes
+ 				''TiltSeriesData:single_dual''
+ 	defocus			... ?
+ 				''TiltSeriesData:defocus''
+ 	magnification		... ?
+ 				''TiltSeriesData:magnification''
+ 	scope			... ?
+ 				''TiltSeriesData:scope''
+ 	swAcquisition		... type of software to acquire the tilt series
+ 				''TiltSeriesData:software_acquisition'''
+ 	swProcess		... type of processing used to build reconstruction
+ 				''TiltSeriesData:software_acquisition'''
+ 	emdb			... code for the tomogram if is also on EMDB database
+ 				''TiltSeriesData:emdb'''
+ 	tags			... Optional comma delimited list of search terms.
+ artifact.roles.
+ 	party			... who did what
+ 				''GroupData:name'' (w/ tenure "Lab) & ''UserData:fullname'' (w/ tenure "Microscopist") & ''TiltSeriesData:roles'' 
+ 	tenure			... what they did [examples are Lab, Institution, Microscopist] 
+ 				''TiltSeriesData:roles''
+ artifact.storage.
+ 	network			... Name of the storage network. For the Electro Tomography DB, it is IPFS.
+ 	location		... IPFS directory location hash
+ 	files			... Array of file descriptions. These files provide the sources for this
+ 					artifact. These can be documents, audio, video, or other binary data
+ 					that represent any supporting evidence for this artifact. Additionally,
+ 					the files themselves can contain cryptographic proofs without the
+ 					original content providing a mechanism for privacy where original
+ 					documents are stored off-chain.
+ 		fType		... There are a limited set of file types in a Tomogram artifact. They
+ 					are: "tiltSeries", a .mrc or .st file, tomogram "reconstruction", a .rec or .mrc 
+ 					file, "subvolume", a cropped reconstruction .rec or .mrc 
+ 					file, "snapshot" a .jpg or a .png file, and "preview" a .flv (for now) file.
+ 				if ''ThreeDFile:classify'' == 'rawdata', then "tiltSeries"
+ 				if ''ThreeDFile:classify'' == 'reconstruction', then "reconstruction"
+ 				if ''DataFile:filetype'' == '2dimage', then "snapshot"
+ 				if ''DataFile:filetype'' == 'movie', then "preview"
+ 		fName		... Filename
+ 				''DataFile:filename''
+ 		fSize		... File size in bytes
+ 		fNotes		... Notes for this file in particular (applicable mainly to snapshots)
+ 				''DataFile:TXT_notes'' 
+ 		dName		... Optional display name used by user interfaces
+ artifact.signature		... Signature signed by publisher
+
+```
+
+
+
 
 ## OIP-041 JSON Standards
 The following are the current OIP-041 JSON Standards.
